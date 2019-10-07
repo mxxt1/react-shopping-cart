@@ -12,13 +12,14 @@ import ShoppingCart from './components/ShoppingCart';
 
 function App() {
 	const [products] = useState(data);
-	const [cart, setCart] = useState([]);
-	const [storedCart, setStoredCart] = useLocalStorage('cart', cart)
+	// const [cart, setCart] = useState([]);
+	const [storedCart, setStoredCart] = useLocalStorage('cart', [])
 
 	const addItem = item => {
 		// add the given item to the cart
-		setCart([...cart, item]);
-		setStoredCart([...cart, item]);
+		//I don't actually need cart/setCart state anymore, I could just storedCart everywhere. 
+		// setCart([...cart, item]);
+		setStoredCart([...storedCart, item]);
 	};
 
 
