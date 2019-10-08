@@ -22,9 +22,14 @@ function App() {
 		setStoredCart([...storedCart, item]);
 	};
 
+	//changed key during map from id to index. Seems to have resolved the issue, but not sure why since the key was previously set as props.id, but the remove function was only operating on item.id. The filter function on the remove function is looking at object.id and excluding the passed item.id. The component key shouldn't have an impact (or should it and I'm not understanding correctly...)
 
+	
 	const removeItem = itemID => {
-		return setStoredCart(storedCart.filter(item => item.id !== itemID));
+		
+		const updatedCart = storedCart.filter(item => item.id !== itemID);
+		
+		setStoredCart(updatedCart);
 	};
 
 	return (

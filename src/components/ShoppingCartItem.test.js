@@ -9,7 +9,6 @@ import Item from '../components/ShoppingCartItem';
 import {getByTestId, 
     getByText, 
     wait, 
-    await, 
     expect, 
     waitForElement, 
     async, 
@@ -17,6 +16,18 @@ import {getByTestId,
     fireEvent} from '@testing-library/react';
 
 
+
+    it('renders ', async () => {
+        const wrapper = await render(<App />)});
+
+
+
+
+        //     it('renders without crashing', () => {
+//         const div = document.createElement('div');
+//         ReactDOM.render(<App />, div);
+//         ReactDOM.unmountComponentAtNode(div);
+//       });
 
 // test('remove button clicks ', () => {
 //     const wrapper = getByTestId('navigation');
@@ -34,26 +45,26 @@ import {getByTestId,
 
 
 // test('shopping cart renders', async () => {
-//     // expect(() => getByTestId('navigation'))
+//     expect(() => getByTestId('navigation'))
 
-//     // await wait(() => {
-//     //     expect(rtl.getByTestId('navigation')).toBeTruthy()
-//     // })
+//     await wait(() => {
+//         expect(rtl.getByTestId('navigation')).toBeTruthy()
+//     })
 
-//     // await waitForElement(() => getByTestId('navigation'))
+//     await waitForElement(() => getByTestId('navigation'))
 
 //    await wait(() => getByTestId('navigation')); 
 
 // })
 
 
-test('Navigation renders', async () => {
-    expect(() => getByText('Products')).toThrow()
+// test('Navigation renders', async () => {
+//     expect(() => getByText('Products')).toThrow()
 
-    await wait(() => {
-        expect(getByText('Products')).toBeTruthy()
-    })
+//     await wait(() => {
+//         expect(getByText('Products')).toBeTruthy()
+//     })
 
-    await waitForElement(() => getByText('Products'))
+//     await waitForElement(() => getByText('Products'))
 
-});
+// })
